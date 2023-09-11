@@ -1,7 +1,7 @@
 <?php
 
 if (strpos($message, "/register") === 0 || strpos($message, "!register") === 0 || strpos($message, ".register") === 0) {
-    sendaction($chatId, typing); 
+    sendaction($chatId, 'typing'); 
 
     $link = mysqli_connect("containers-us-west-145.railway.app", "root", "84KWbt5bmJ9YfDEpKCu8", "railway");
     
@@ -23,7 +23,7 @@ if (strpos($message, "/register") === 0 || strpos($message, "!register") === 0 |
     }
 
     $response = urlencode("<b> $resultMsg</b>");
-    reply_to($chatId, $message_id, $keyboard, $resultMsg);
+    reply_to($chatId, $message_id, $keyboard, $response);
 }
 
 ?>
