@@ -276,7 +276,7 @@ exit();
 }elseif($check<25){
 reply_to($chatId, $message_id,$keyboard,$validauth);
 exit();
-}elseif(strpos($check1 != 'sk_live')){
+}elseif(strpos($check1, 'sk_live') === false){
 reply_to($chatId, $message_id,$keyboard,$validauth);
 exit();
 }
